@@ -31,7 +31,7 @@ public class Main {
 //--------------------------------------------------------------------------------------//
         Employee employee1 = new Employee("0001", "Hussam", 12000);
         System.out.println(employee1.toString());
-        if (employee1.raisedSalary(-35)){
+        if (employee1.raisedSalary(35)){
             System.out.printf("your new salary is: %d\n", employee1.getSalary());
         }else {
             System.out.println("wrong percent");
