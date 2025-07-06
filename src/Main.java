@@ -10,6 +10,8 @@ public class Main {
         Account account4 = new Account("oopellds", "Rayan");
         //use default account: demo, A-demo, 500
         Account account5 = new Account();
+        //this will show you that you cannot do negative balance from constructor
+        Account account6 = new Account("A-122222", "Bader", -19938);
 
         // amount used in add money to credit() and transferTo()
         int amount = 20000;

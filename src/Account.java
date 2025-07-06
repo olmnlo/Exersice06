@@ -49,7 +49,7 @@ public class Account {
 
     public void setBalance(int balance) {
         if (balance < 0){
-            System.out.println("you cannot enter negative balance");
+            System.out.printf("you cannot enter negative balance for this account: %s\n", this.getName());
         }else {
             this.balance = balance;
         }
