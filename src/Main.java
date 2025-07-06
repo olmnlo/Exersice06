@@ -18,7 +18,6 @@ public class Main {
             System.out.printf("your debit unsuccessfully your balance: %d\n",account1.getBalance());
         }
 
-
         if (account1.transferTo(account2, amount)){
             System.out.printf("%d transfer successfully\nyour new balance %d",amount ,account1.getBalance());
         }else {
@@ -26,6 +25,8 @@ public class Main {
         }
 
 
+//--------------------------------------------------------------------------------------//
+        Employee employee1 = new Employee("0001", "Hussam", 12000);
 
     }
 }

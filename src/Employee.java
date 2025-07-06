@@ -18,7 +18,11 @@ public class Employee {
     }
 
     public void setId(String id) {
-        this.id = id;
+        if (!id.startsWith("00")){
+            System.out.print("your id must start with 00\n");
+        }else {
+            this.id = id;
+        }
     }
 
     public String getName() {
@@ -26,7 +30,11 @@ public class Employee {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name.contains("@")){
+            System.out.println("you cannot enter @ in your name");
+        }else {
+            this.name = name;
+        }
     }
 
     public int getSalary() {
@@ -34,15 +42,20 @@ public class Employee {
     }
 
     public void setSalary(int salary) {
-        this.salary = salary;
+        if (salary < 0) {
+            System.out.println("you cannot make salary negative");
+        }else {
+            this.salary = salary;
+        }
     }
 
     public int getAnnualSalary(int annual){
         return this.salary*annual;
     }
 
-    public int raisedSalary(int percent){
-        return this.salary*percent;
+    public boolean raisedSalary(int percent){
+        this.salary += (this.salary*percent);
+        return true;
     }
 
     @Override
