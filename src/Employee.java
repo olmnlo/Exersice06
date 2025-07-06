@@ -54,6 +54,7 @@ public class Employee {
     }
 
     public int getAnnualSalary(int annual){
+        //annual is year so 2 = 2*12 month
         if (annual <= 0){
             return salary;
         }else {
