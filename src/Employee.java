@@ -59,7 +59,8 @@ public class Employee {
 
     public boolean raisedSalary(int percent){
         if (percent > 0){
-            this.salary += (this.salary*(percent/100));
+            double percentn = (double) percent/100;
+            this.salary += (int)(this.salary*percentn);
             return true;
         }else {
             return false;
