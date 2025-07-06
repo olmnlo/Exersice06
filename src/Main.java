@@ -15,7 +15,7 @@ public class Main {
         int amount = 20000;
         // debit_amount used in debit()
         int debit_amount = 10000;
-        //show you the initial value for account1 and account2
+        //show you the initial value for account1 to account5
         System.out.println("-----------------------------------------------");
         System.out.println(account1.toString());
         System.out.println(account2.toString());
