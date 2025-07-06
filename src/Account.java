@@ -24,7 +24,7 @@ public class Account {
     }
 
     public void setId(String id) {
-        if (id.length() != 12){
+        if (id.length() != 12 && id.contains("@")){
             System.out.printf("You cannot enter this id: %s\n", id);
         }else {
         this.id = id;
