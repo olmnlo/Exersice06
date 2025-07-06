@@ -53,14 +53,14 @@ public class Account {
             this.balance = balance;
         }
     }
-
+    // I prefer to credit and debit as boolean because it depends on the operation is pass or failed not operations or calculation
     public boolean credit(int amount){
         balance += amount;
         return true;
     }
     public boolean debit(int amount){
         if(amount <= this.balance){
-            this.balance = this.balance-amount;
+            this.balance -= amount;
             return true;
         }
         return false;
