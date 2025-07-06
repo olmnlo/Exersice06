@@ -15,9 +15,9 @@ public class Account {
         balance = 500;
     }
     public Account(String id, String name, int balance) {
+        setName(name);
         setId(id);
         setBalance(balance);
-        setName(name);
     }
 
     public String getId() {

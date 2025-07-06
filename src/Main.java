@@ -24,6 +24,7 @@ public class Main {
         System.out.println(account3.toString());
         System.out.println(account4.toString());
         System.out.println(account5.toString());
+        System.out.println(account6.toString());
         System.out.println("-----------------------------------------------");
         System.out.println("operations between account1 and account2:");
         //add amount to account1 balance
