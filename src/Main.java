@@ -7,6 +7,7 @@ public class Main {
         int amount = 20000;
         int debit_amount = 10000;
         System.out.println(account1.toString());
+        System.out.println(account2.toString());
 
         if (account1.credit(amount)){
             System.out.printf("your new balance: %d\n", account1.getBalance());
@@ -23,10 +24,21 @@ public class Main {
         }else {
             System.out.printf("you cannot transfer you do not have enough balance your balance: %d, you want to transfer: %d", account1.getBalance(), amount);
         }
+        System.out.println(account1.toString());
+        System.out.println(account2.toString());
 
 
 //--------------------------------------------------------------------------------------//
         Employee employee1 = new Employee("0001", "Hussam", 12000);
+
+        if (employee1.raisedSalary(10)){
+            System.out.printf("your new salary is: %d", employee1.getSalary());
+        }else {
+            System.out.println("wrong percent");
+        }
+
+        System.out.printf("your annual salary is: %d", employee1.getAnnualSalary(2));
+
 
     }
 }

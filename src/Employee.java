@@ -50,12 +50,20 @@ public class Employee {
     }
 
     public int getAnnualSalary(int annual){
-        return this.salary*annual;
+        if (annual <= 0){
+            return salary;
+        }else {
+            return this.salary * (annual*12);
+        }
     }
 
     public boolean raisedSalary(int percent){
-        this.salary += (this.salary*percent);
-        return true;
+        if (percent > 0){
+            this.salary += (this.salary*(percent/100));
+            return true;
+        }else {
+            return false;
+        }
     }
 
     @Override
