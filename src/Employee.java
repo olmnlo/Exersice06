@@ -4,13 +4,15 @@ public class Employee {
     private int salary;
 
     public Employee() {
-
+        id = "0001";
+        name = "demo";
+        salary = 0;
     }
 
     public Employee(String id, String name, int salary) {
-        this.id = id;
-        this.name = name;
-        this.salary = salary;
+        setId(id);
+        setSalary(salary);
+        setName(name);
     }
 
     public String getId() {
@@ -20,6 +22,8 @@ public class Employee {
     public void setId(String id) {
         if (!id.startsWith("00")){
             System.out.print("your id must start with 00\n");
+        }else if (id.length() != 4 || !id.matches("\\d{4}")){
+            System.out.println("you must have 4 digits");
         }else {
             this.id = id;
         }

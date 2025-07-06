@@ -5,13 +5,14 @@ public class Account {
 
     public Account(){
         name = "demo";
-        id = "demo";
+        id = "A-demo";
         balance = 500;
     }
 
     public Account(String id, String name){
         setName(name);
         setId(id);
+        balance = 500;
     }
     public Account(String id, String name, int balance) {
         setId(id);
@@ -24,8 +25,8 @@ public class Account {
     }
 
     public void setId(String id) {
-        if (id.length() != 12 && id.contains("@")){
-            System.out.printf("You cannot enter this id: %s\n", id);
+        if (id.length() != 12 && id.contains("@") || !(id.startsWith("A-"))){
+            System.out.printf("You cannot enter this id: %s for account name %s\n", id, this.getName());
         }else {
         this.id = id;
         }
@@ -55,8 +56,12 @@ public class Account {
     }
     // I prefer to credit and debit as boolean because it depends on the operation is pass or failed not operations or calculation
     public boolean credit(int amount){
-        balance += amount;
-        return true;
+        if (amount > 0){
+            balance += amount;
+            return true;
+        }else {
+            return false;
+        }
     }
     public boolean debit(int amount){
         if(amount <= this.balance){
@@ -68,7 +73,7 @@ public class Account {
 
     public boolean transferTo(Account account, int amount){
         if (this.balance >= amount){
-            account.setBalance(this.balance+amount);
+            account.setBalance(account.getBalance()+amount);
             this.balance -= amount;
             return true;
         }else {
